@@ -1,0 +1,12 @@
+.user-panel {
+    display: none !important;
+}
+.breadcrumb {
+    display: none;
+}
+#jazzy-sidebar > div > nav > ul > li.nav-header {
+    display: none !important;
+}
+#content > div > div.col-lg-3.col-12 {
+    display: none;
+}

@@ -1,0 +1,42 @@
+:root {
+    --bs-body-font-family: Nunito,sans-serif;
+    --bs-body-font-size: .9rem;
+    --bs-body-line-height: 1.6;
+}
+body {
+    color: #212529;
+    text-align: left;
+}
+a {
+    text-decoration: none;
+    background-color: transparent;
+}
+a:hover {
+    text-decoration: underline;
+}
+.collapse,
+.collapsing {
+    transition: none;
+}
+.table th {
+     padding: .75rem;
+    vertical-align: top;
+    border-top: 1px solid #dee2e6;
+}
+.text-aues {
+    color: #2d496e !important;
+}
+.thead-aues th{
+    color: #fff;
+    background-color: #2d496e;
+    border-color: #3d5a7e;
+    padding-bottom: 20px;
+}
+p {
+    margin-bottom: 0
+}
+
+#filter-form div {
+    display: flex;
+    align-items: center
+}

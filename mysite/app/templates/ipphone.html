@@ -1,0 +1,85 @@
+{% load static %}
+<!DOCTYPE html>
+<html>
+<head>
+    <title>{% block title %}{% endblock %}</title>
+    <link rel="stylesheet" href="{% static 'bootstrap-5/css/bootstrap.css' %}">
+    <script src="{% static 'bootstrap-5/js/bootstrap.js' %}"></script>
+    <link rel="stylesheet" href="{% static 'app/css/app.css' %}">
+    <link href="https://fonts.googleapis.com/css?family=Nunito" rel="stylesheet">
+    <script src="{% static 'js/jquery.min.js' %}"></script>
+    <script src="{% static 'app/js/numbersSearch.js' %}"></script>
+</head>
+<body>
+<nav class="navbar navbar-light bg-white d-flex justify-content-around align-items-center"><a
+        href="https://ipphone.aues.kz" class="navbar-brand"><img src="{% static 'admin/images/logo.png' %}"
+                                                                 alt="логотоп ауэс" width="250"></a>
+    <div><i>Телефон Контакт центра Университета</i> – <b class="text-aues">3 23 11 75</b> <br><i>Формат набора на
+        внутренние номера</i> – <b class="text-aues">ХХХХ</b> <br><i>Формат набора на городские номера</i> – <b
+            class="text-aues">ХХХ ХХ ХХ</b>
+        <div class="text-center mt-3">
+            Скачать <a href="https://ipphone.aues.kz/export/short" class="text-aues">Кратко</a> / <a
+                href="https://ipphone.aues.kz/export/full" class="text-aues">Всё</a></div>
+    </div>
+</nav>
+<main class="container-fluid">
+    <div class="row justify-content-center py-3">
+        <div class="form-outline col-8 mx-auto" data-mdb-input-init>
+            <input name="search" autofocus="autofocus" type="search" id="search-input"
+                   class="form-control w-100 m-3 p-2" placeholder="Поиск..." aria-label="Search"/>
+            <div class="d-flex justify-content-left align-items-center mx-auto">
+                <form class="d-flex flex-wrap gap-3 mx-3" id="filter-form">
+                    <legend class="text-aues fs-5 d-flex">Поиск по:</legend>
+                    <div>
+                        <input type="checkbox" id="name" name="filter" value="name"/>
+                        <label for="name">Ф.И.О</label>
+                    </div>
+                    <div>
+                        <input type="checkbox" id="institute" name="filter" value="institute"/>
+                        <label for="institute">Институту</label>
+                    </div>
+                    <div>
+                        <input type="checkbox" id="position" name="filter" value="position"/>
+                        <label for="position">Должности</label>
+                    </div>
+                    <div>
+                        <input type="checkbox" id="cabinet" name="filter" value="cabinet"/>
+                        <label for="email">Номеру кабинета</label>
+                    </div>
+                    <div>
+                        <input type="checkbox" id="email" name="filter" value="email"/>
+                        <label for="email">Почте</label>
+                    </div>
+                    <div>
+                        <input type="checkbox" id="local-number" name="filter" value="local-number"/>
+                        <label for="local-number">Внутреннему номеру</label>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+    <div class="container">
+        <div class="row justify-content-center tables">
+            <div class="col-12">
+                <table class="table d-md-table d-none sticky-top text-center">
+                    <thead class="thead-aues">
+                    <tr class="row">
+                        <th scope="col" class="col-1 d-flex justify-content-center align-items-center thead-aues">
+                            Внутренние
+                            номера
+                        </th>
+                        <th scope="col" class="col-4 d-flex justify-content-center align-items-center">Ф.И.О.</th>
+                        <th scope="col" class="col-3 d-flex justify-content-center align-items-center">Должность</th>
+                        <th scope="col" class="col-1 d-flex justify-content-center align-items-center">Кабинет</th>
+                        <th scope="col" class="col-3 d-flex justify-content-center align-items-center">E-mail</th>
+                    </tr>
+                    </thead>
+                </table>
+                <div id="tables">
+                    <!-- here show tables  with js-->
+                </div>
+            </div>
+        </div>
+    </div>
+</main>
+</body>

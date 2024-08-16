@@ -1,0 +1,35 @@
+{% extends "admin/change_list.html" %}
+{% load static %}
+{% block extrahead %}
+{{ block.super }}
+<script src="{% static 'js/jquery.min.js' %}"></script>
+<script src="{% static 'admin/js/numbersSearch.js' %}"></script>
+{% endblock %}
+{% block content %}
+<div>
+    <div class="custom-search">
+    <!-- Поисковая форма -->
+    <input type="text" name="q" placeholder="Поиск..." id="search-input">
+    <br>
+</div>
+<div class="container">
+    <table class="table table-striped table-bordered">
+    <thead>
+    <tr>
+        <th>
+            Ф.И.О
+        </th>
+        <th>
+            Должность
+        </th>
+        <th>
+            Почта
+        </th>
+        <th>Действие</th> <!-- Добавляем заголовок для кнопок -->
+    </tr>
+    </thead>
+        <tbody id="result_list"></tbody>
+    </table>
+</div>
+</div>
+{% endblock %}

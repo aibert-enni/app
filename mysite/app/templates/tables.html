@@ -1,0 +1,22 @@
+{% for data in main %}
+        <table class="table text-center">
+            <thead role="button" data-bs-toggle="collapse" class="accordion-toggle thead-aues" data-bs-target="#table-{{data.institute.id}}">
+                <tr class="row">
+                    <th scope="col" class="col">
+                        {{data.institute.name}}
+                    </th>
+                </tr>
+            </thead>
+            <tbody data-toggle="collapse" id="table-{{data.institute.id}}" class="accordion-body show">
+        {% for number in data.numbers %}
+        <tr class="row">
+            <th class="col-md-1 col-12 d-md-table-cell d-flex justify-content-between align-middle">{{number.local_number}}</th>
+            <th class="col-md-4 col-12 d-md-table-cell d-flex justify-content-between align-middle">{{number.name}}</th>
+            <th class="col-md-3 col-12 d-md-table-cell d-flex justify-content-between align-middle">{{number.position}}</th>
+            <th class="col-md-1 col-12 d-md-table-cell d-flex justify-content-between align-middle">{{number.cabinet}}</th>
+            <th class="col-md-3 col-12 d-md-table-cell d-flex justify-content-between align-middle">{{number.email}}</th>
+        </tr>
+        {% endfor %}
+    </tbody>
+        </table>
+        {% endfor %}
