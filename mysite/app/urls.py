@@ -1,8 +1,8 @@
 from django.urls import path
 from . import views
+from .views import Ipphone
 
 urlpatterns = [
-    path('ipphone/', views.ipphone, name="ipphone"),
-    path('search/', views.search_numbers, name='playground_numbers_search'),
+    path('ipphone/', Ipphone.as_view()),
     path('numbers/', views.numbers, name='numbers')
 ]
