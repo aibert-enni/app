@@ -1,1 +1,67 @@
-env
+# Python
+*.py[cod]
+*.pyo
+*.pyd
+pycache/
+*.so
+
+# Virtual Environments
+.venv/
+venv/
+.Venv/
+ENV/
+env/
+.venv/*
+/venv/*
+venv/*
+
+# Django stuff:
+*.log
+*.pot
+*.pyc
+*.mo
+*.env
+
+# Ignore Django migrations
+*/migrations/
+!**/migrations/init.py
+
+# Databases
+*.sqlite3
+
+# media
+/media/
+MEDIA/
+
+# Static files
+/staticfiles/
+/static/
+
+# MacOS
+.DS_Store
+
+# IDEs
+.idea/
+.vscode/
+*.sublime-project
+*.sublime-workspace
+
+# Ignore node modules for frontend packages (if you use npm/yarn)
+node_modules/
+
+# Ignore compiled bytecode and other Python artifacts
+*.pyc
+*.pyo
+
+# Ignore test and coverage results
+*.coverage
+.coverage.*
+htmlcov/
+.tox/
+.nox/
+.pytest_cache/
+.cache/
+
+# Ignore pip related files
+pip-log.txt
+pip-delete-this-directory.txt
