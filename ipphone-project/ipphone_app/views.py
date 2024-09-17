@@ -1,7 +1,4 @@
-from django.db.models import Q
-from django.shortcuts import render
 from django.http import JsonResponse
-from django.views import View
 from django.views.generic import TemplateView
 
 from .models import Numbers

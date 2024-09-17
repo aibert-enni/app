@@ -31,8 +31,8 @@ function showTables(data) {
                         <td>${obj.position}</td>
                         <td>${obj.email}</td>
                         <td>
-                            <a href="/admin/app/numbers/${obj.id}/change/" class="btn btn-secondary mb-2 btn-sm">Редактировать</a>
-                            <a href="/admin/app/numbers/${obj.id}/delete/" class="btn btn-danger btn-sm">Удалить</a>
+                            <a href="/admin/ipphone_app/numbers/${obj.id}/change/" class="btn btn-secondary mb-2 btn-sm">Редактировать</a>
+                            <a href="/admin/ipphone_app/numbers/${obj.id}/delete/" class="btn btn-danger btn-sm">Удалить</a>
                         </td>
                     </tr>
                 `
